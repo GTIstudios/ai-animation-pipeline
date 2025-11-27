@@ -1,0 +1,10 @@
+{
+  "CaptainBear": {
+    "voice_id": "EXAMPLE_VOICE_ID",
+    "description": "Heroic, warm, confident leader tone"
+  },
+  "Onyx": {
+    "voice_id": "EXAMPLE_VOICE_ID",
+    "description": "Smart, precise, analytical tone"
+  }
+}

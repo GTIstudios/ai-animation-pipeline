@@ -1,0 +1,38 @@
+GTI STUDIOS – AI ANIMATION PIPELINE (ASCII ARCHITECTURE DIAGRAM)
+==============================================================
+
+                +------------------------+
+                |      Script Text       |
+                +-----------+------------+
+                            |
+                            v
+                +------------------------+
+                |  ElevenLabs Voice App  |
+                | (Character Voice Gen)  |
+                +-----------+------------+
+                            |
+                      Voice Lines (.wav/.mp3)
+                            |
+                            v
+                +------------------------+
+                |       ComfyUI          |
+                |  (Animation Workflows) |
+                +-----------+------------+
+                            |
+                  Scene Frames / Video
+                            |
+                            v
+                +------------------------+
+                |     Video Editing      |
+                | (Assembly + Timing)    |
+                +-----------+------------+
+                            |
+                      Final Episode Export
+                            |
+                            v
+                +------------------------+
+                |         n8n            |
+                |  (Automation + Posting)|
+                +-----------+------------+
+                            |
+         Scheduled Clips / YouTube / TikTok / IG Reels

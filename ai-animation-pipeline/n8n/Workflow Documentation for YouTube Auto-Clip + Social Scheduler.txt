@@ -1,0 +1,70 @@
+### `youtube_viral_clip_scheduler.json`
+
+This workflow analyzes a long-form YouTube video, automatically identifies high-value segments, clips the video into 3–6 short viral-ready pieces, adds captions, exports the clips, and schedules them for automated posting across social platforms.
+
+This workflow represents a full AI-assisted media distribution engine designed to maximize reach without manual editing.
+
+#### 🔍 What the Workflow Does
+
+1. **Fetches a long-form YouTube video**
+   - Extracts metadata  
+   - Downloads or processes the input video  
+
+2. **Analyzes video content**
+   - Identifies high-engagement sections  
+   - Detects energy peaks, transitions, punchlines, or moments of interest  
+   - Determines clip boundaries automatically  
+
+3. **Generates 3–6 short video clips**
+   - Trims the video  
+   - Converts to vertical/portrait format if needed  
+   - Adds subtitles/captions  
+   - Normalizes audio  
+   - Exports clips into a ready-to-publish folder  
+
+4. **Applies an upload/posting schedule**
+   - Every day or every other day (configurable)  
+   - Automatically queues posts based on number of clips generated  
+
+5. **Auto-posts clips to social platforms**
+   - TikTok  
+   - Instagram Reels  
+   - YouTube Shorts  
+   - Other platforms depending on connected credentials  
+
+6. **Sends recap/logging**
+   - Notifies when clips are created  
+   - Confirms future scheduled posts  
+   - Reports any upload errors  
+
+#### 📦 Output Examples
+
+- `clip_01_ready_for_upload.mp4`  
+- `clip_02_captioned.mp4`  
+- `clip_03_optimized_shorts_format.mp4`  
+
+Each clip is fully production-ready for viral distribution.
+
+#### 🎯 Why This Workflow Matters
+
+This workflow automates a high-value, high-time-cost task:
+
+- Turning long-form content into daily social growth  
+- Keeping channels active consistently  
+- Increasing discoverability  
+- Building engagement without manual editing  
+- Scaling content output from a single video source  
+
+This replicates functionality offered by paid social automation tools — but fully customized and owned by GTI Studios.
+
+#### 🧠 Skills Demonstrated
+
+- n8n workflow architecture  
+- Scheduled automation  
+- Video analysis + clipping  
+- Captioning / transcription pipelines  
+- Multi-platform posting automation  
+- Media lifecycle management  
+- Production-grade orchestration at scale  
+
+This workflow serves as the **distribution engine** of the GTI Studios AI animation ecosystem.

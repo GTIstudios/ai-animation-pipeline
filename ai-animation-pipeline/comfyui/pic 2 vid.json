@@ -1,0 +1,72 @@
+{
+  "added_nodes": [
+    {
+      "id": "Load Image (Reference)",
+      "type": "LoadImage",
+      "properties": {
+        "image": "G:\\ComfyUI_windows_portable\\ComfyUI\\input\\reference.png"
+      }
+    },
+    {
+      "id": "VAE Encode (Reference)",
+      "type": "VAEEncode",
+      "properties": {
+        "vae_name": "wan_alpha_2.1_vae_rgb_channel.safetensors"
+      },
+      "inputs": {
+        "image": "Load Image (Reference).IMAGE"
+      }
+    },
+    {
+      "id": "IPAdapter Plus V2 (Style Consistency)",
+      "type": "IPAdapterPlusV2",
+      "properties": {
+        "strength": 0.68,
+        "image_weight": 1.0
+      },
+      "inputs": {
+        "reference_latent": "VAE Encode (Reference).LATENT",
+        "clip_prompt": "CLIP Text Encode (Positive).CONDITIONING"
+      }
+    },
+    {
+      "id": "Toggle Save Type",
+      "type": "Boolean",
+      "properties": {
+        "label": "Save_as_MOV?",
+        "default": false
+      }
+    },
+    {
+      "id": "Save Animated WEBP",
+      "type": "SaveAnimatedWEBP",
+      "properties": {
+        "filename": "G:\\ComfyUI_windows_portable\\ComfyUI\\output\\preview_alpha.webp"
+      },
+      "inputs": {
+        "images": "JoinImageWithAlpha.IMAGE",
+        "condition": "Toggle Save Type.FALSE"
+      }
+    },
+    {
+      "id": "Save Video (FFmpeg)",
+      "type": "SaveVideoFFmpeg",
+      "properties": {
+        "filename": "G:\\ComfyUI_windows_portable\\ComfyUI\\output\\final_alpha.mov",
+        "codec": "prores_ks",
+        "pix_fmt": "yuva444p10le",
+        "fps": 16
+      },
+      "inputs": {
+        "images": "JoinImageWithAlpha.IMAGE",
+        "condition": "Toggle Save Type.TRUE"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from": "IPAdapter Plus V2 (Style Consistency).OUTPUT",
+      "to": "KSampler.POSITIVE"
+    }
+  ]
+}
